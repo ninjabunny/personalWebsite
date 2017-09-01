@@ -11,7 +11,7 @@ import Donate from './components/Donate';
 
 export default (
   <Route path='/' components={App}>
-    <IndexRoute componenst={Home} />
+    <IndexRoute components={Home} />
     <Route path='about' components={About} />
     <Route path='work' components={Work} />
     <Route path='resume' components={Resume} />
