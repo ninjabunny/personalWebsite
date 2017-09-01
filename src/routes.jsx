@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, IndexRoute } from 'react-router';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import App from './app';
 import Home from './components/home';
 import About from './components/About';
@@ -10,12 +10,12 @@ import Donate from './components/Donate';
 
 
 export default (
-  <Route path='/' components={App}>
-    <IndexRoute components={Home} />
-    <Route path='about' components={About} />
-    <Route path='work' components={Work} />
-    <Route path='resume' components={Resume} />
-    <Route path='blog' components={Blog} />
-    <Route path='donate' components={Donate} />
-  </Route>
+  <Router history={browserHistory}>
+    <Route path='/' components={Home} />
+    <Route path='/about' components={About} />
+    <Route path='/work' components={Work} />
+    <Route path='/resume' components={Resume} />
+    <Route path='/log' components={Blog} />
+    <Route path='/donate' components={Donate} />
+  </Router>
 );
